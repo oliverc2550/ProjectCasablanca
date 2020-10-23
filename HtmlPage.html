@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--Working Game Title-->
+    <title>Project Casablanca</title>
+    <!--External CSS Style Sheet-->
+    <link rel="stylesheet" href="StyleSheet.css" />
+</head>
+<body>
+    <!--Game Canvas Layers-->
+    <div style="position: relative;">
+        <canvas id="backgroundCanvas" width="1920" height="1080" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+        <canvas id="textBoxCanvas" width="1920" height="1080" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+        <canvas id="textCanvas" width="1920" height="1080" style="position: absolute; left: 0; top: 0; z-index: 2;"></canvas>
+        <canvas id="startBtnCanvas" width="105" height="60" style="border: 1px solid #000000; position: absolute; left: 860px; top: 1000px; z-index: 3;"></canvas>
+    </div>
+
+    <!--External .js Functions for canvas drawing-->
+    <script src="gameCanvas.js"></script>
+
+    <!--External .js Functions to Start game and allow Player to input name-->
+    <script src="getPlayerName.js"></script>
+
+    <!--External .js Array to store game dialogue-->
+    <script src="dialogueArray.js"></script>
+
+    <!--External .js Functions to Display, Hide and change Button Text-->
+    <script src="dialogueButtonFunctions.js"></script>
+
+    <!--External .js Functions to run game dialogue loops-->
+    <script src="dialogueLoop.js"></script>
+
+    <!--External .js Event Listeners and Drawing statements for canvas buttons-->
+    <script src="canvasBtns.js"></script>
+
+    <!--Game Start Button-->
+    <!--div class="btn-group" style="position: absolute; left: 880px; top: 1020px; z-index: 3;">
+        <button class="button" id="gamestart" onclick="gameIntro()">Start Game</button>
+    </!-div>
+
+    <!--Buttons to select which dialogue option the Player wants-->
+    <div class="btn-group" style="position: absolute; left: 880px; top: 1020px; z-index: 3;">
+        <button class="button" id="next" style="display:none" onclick="getPlayerName()">Next</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 880px; top: 1020px; z-index: 3;">
+        <button class="button" id="next1" style="display:none" onclick="dialogue1()">Next</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 800px; top: 1020px; z-index: 3;">
+        <button class="button" id="screen6ATruth" style="display:none" onclick="screenSixATruth()">[Truth]</button>
+        <button class="button" id="screen6AJoke" style="display:none" onclick="screenSixAJoke()">[Joke]</button>
+        <button class="button" id="screen6ARefuse" style="display:none" onclick="screenSixARefuse()">[Refuse]</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 840px; top: 1020px; z-index: 3;">
+        <button class="button" id="continue" style="display:none" onclick="continueGame()">[Sure go ahead and ask]</button>
+        <button class="button" id="endGame" style="display:none" onclick="endGame()">[I’d rather not answer any questions right now]</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 880px; top: 1020px; z-index: 3;">
+        <button class="button" id="next2" style="display:none" onclick="dialogue2()">Next</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 800px; top: 1020px; z-index: 3;">
+        <button class="button" id="life" style="display:none" onclick="screen9DialogueLife()">[Life]</button>
+        <button class="button" id="wealth" style="display:none" onclick="screen9DialogueWealth()">[Wealth]</button>
+        <button class="button" id="knowledge" style="display:none" onclick="screen9DialogueKnowledge()">[Knowledge]</button>
+        <button class="button" id="nothing" style="display:none" onclick="screen9DialogueNothing()">[Nothing]</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 880px; top: 1020px; z-index: 3;">
+        <button class="button" id="next3" style="display:none" onclick="screen10Dialogue()">Next</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 800px; top: 1020px; z-index: 3;">
+        <button class="button" id="yes" style="display:none" onclick="screen11DialogueYes()">[Yes]</button>
+        <button class="button" id="no" style="display:none" onclick="screen11DialogueNo()">[No]</button>
+        <button class="button" id="iDontKnow" style="display:none" onclick="screen11DialogueIDontKnow()">[I Don't Know]</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 840px; top: 1020px; z-index: 3;">
+        <button class="button" id="yes2" style="display:none; position: relative; z-index: 3;" onclick="screen14DialogueYes()">[Yes]</button>
+        <button class="button" id="no2" style="display:none; position: relative; z-index: 3;" onclick="screen14DialogueNo()">[No]</button>
+    </div>
+
+    <div class="btn-group" style="position: absolute; left: 880px; top: 1020px; z-index: 3;">
+        <button class="button" id="next4" style="display:none" onclick="dialogue3()">Next</button>
+    </div>
+</body>
+</html>
